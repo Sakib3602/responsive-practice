@@ -1,0 +1,46 @@
+.box{
+
+   
+    border: 2px solid purple;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.box img{
+    width: 100%;
+}
+
+header{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+@media screen and (max-width:576px) {
+    header{
+        
+        grid-template-columns: repeat(1,1fr);
+    }
+    .box{
+        margin: 10px;
+    }
+}
+@media  screen and (min-width: 577px) and (max-width : 768px) {
+    header{
+        
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media  screen and (min-width: 769px) and (max-width : 992px) {
+    header{
+        
+        grid-template-columns: repeat(2,1.5fr);
+    }
+}
+@media  screen and (min-width: 992px) and (max-width : 1200px) {
+    header{
+        
+        grid-template-columns: repeat(3,1fr);
+    }
+    .box{
+        margin: 10px;
+    }
+}
