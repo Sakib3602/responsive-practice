@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .page {
+        height: 120vh;
+        width: 100%;
+        background-color: rgb(9, 12, 13);
+      }
+      .page1 {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 60px repeat(3, 1fr);
+        gap: 10px;
+      }
+      #box1 {
+        grid-column: 1/5;
+        grid-row: 1/2;
+        background-color: rgb(226, 43, 73);
+      }
+      #box1 img {
+        height: 100%;
+        width: 100%;
+      }
+      .box {
+        border: 2px solid yellow;
+        border-radius: 5px;
+        
+      }
+      #box2 {
+        grid-row: 2/6;
+        background-color: chartreuse;
+      }
+      #box5 {
+        grid-row: 2/6;
+        grid-column: 4/5;
+        background-color: blueviolet;
+      }
+      #box3 {
+        background-color: cadetblue;
+      }
+      #box10 {
+        grid-column: 2/4;
+        height: 60px;
+        background-color: burlywood;
+      }
+      #box4 {
+        background-color: chocolate;
+      }
+      #box6 {
+        background-color: palevioletred;
+      }
+      #box7 {
+        background-color: rgb(49, 19, 139);
+      }
+      #box8 {
+        background-color: yellow;
+      }
+      #box9 {
+        background-color: aquamarine;
+      }
+      @media only screen and (max-width: 576px) {
+        .page1 {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(10, 1fr);
+        }
+
+        #box1,
+        #box5,
+        #box10 {
+          grid-column: 1/2;
+        }
+
+        #box2,
+        #box3,
+        #box4,
+        #box5,
+        #box6,
+        #box7,
+        #box8,
+        #box9 {
+          grid-column: 1/2;
+          grid-row: auto;
+        }
+        
+
+       
+      }
+
+      @media screen and (min-width:577px) and (max-width:990px) {
+        .page1 {
+        height: 200vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:repeat(10, 1fr);
+        
+      }
+      #box2, #box3, #box4, #box6, #box7, #box8, #box9, #box10
+      {
+        grid-column: 1/5;
+        
+      }
+      #box5{
+        grid-column: 1/5;
+        grid-row: 5/6;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="page1">
+        <div class="box" id="box1">hello</div>
+        <div class="box" id="box2">Hello2</div>
+        <div class="box" id="box3">Hello3</div>
+        <div class="box" id="box4">Hello4</div>
+        <div class="box" id="box5">Hello5</div>
+        <div class="box" id="box6">Hello6</div>
+        <div class="box" id="box7">Hello7</div>
+        <div class="box" id="box8">Hello8</div>
+        <div class="box" id="box9">Hello9</div>
+        <div class="box" id="box10">Hello10</div>
+      </div>
+    </div>
+  </body>
+</html>
